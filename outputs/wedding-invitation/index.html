@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Anjitha & Shinoj | Wedding Invitation</title>
+    <meta name="description" content="Anjitha and Shinoj invite you to celebrate their wedding on 24 August 2026 at Palathara." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anjitha & Shinoj | Wedding Invitation" />
+    <meta property="og:description" content="24 August 2026, 4:00 PM - 9:00 PM at Palathara." />
+    <meta property="og:image" content="assets/couple-04.jpeg" />
+    <meta property="og:image:alt" content="Anjitha and Shinoj wedding invitation preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#5d6f60" />
+    <link rel="preload" as="image" href="assets/couple-04.jpeg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="music" preload="auto" loop playsinline></audio>
+
+    <main class="invite-shell" id="top">
+      <section class="cover" id="cover" aria-label="Opening invitation cover">
+        <img class="cover__image" data-bind-src="previewImage" alt="Anjitha and Shinoj" />
+        <div class="cover__veil"></div>
+        <div class="gold-dust" aria-hidden="true"></div>
+        <div class="cover__content">
+          <p class="kicker">Wedding Invitation</p>
+          <h1><span data-text="bride"></span> <span>&</span> <span data-text="groom"></span></h1>
+          <p data-text="coverLine"></p>
+          <button class="open-button" id="openInvite" type="button">
+            <span>Tap to open</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="hero section reveal">
+        <div class="hero__media">
+          <img data-gallery-index="0" alt="" />
+        </div>
+        <div class="hero__copy">
+          <p class="kicker">Two hearts, one promise</p>
+          <h2><span data-text="bride"></span> <span class="amp">&</span> <span data-text="groom"></span></h2>
+          <p data-text="invitationMessage"></p>
+        </div>
+        <a class="scroll-cue" href="#dateReveal" aria-label="Scroll to invitation details">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="section date-card reveal" id="dateReveal">
+        <p class="kicker">Save the date</p>
+        <div class="scratch-wrap" id="scratchWrap">
+          <div class="date-prize">
+            <span data-text="dateLabel"></span>
+            <small data-text="time"></small>
+          </div>
+          <canvas id="scratchCanvas" aria-label="Scratch to reveal the wedding date"></canvas>
+          <p class="scratch-hint">Scratch to reveal</p>
+        </div>
+      </section>
+
+      <section class="section countdown reveal" aria-label="Wedding countdown">
+        <p class="kicker">Counting every heartbeat</p>
+        <div class="count-grid" id="countdown">
+          <div><strong data-time="days">0</strong><span>Days</span></div>
+          <div><strong data-time="hours">0</strong><span>Hours</span></div>
+          <div><strong data-time="minutes">0</strong><span>Minutes</span></div>
+          <div><strong data-time="seconds">0</strong><span>Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="section portrait-section reveal">
+        <div class="portrait-copy">
+          <p class="kicker">Our story in still moments</p>
+          <h2>Made of laughter, quiet prayers, and forever.</h2>
+        </div>
+        <div class="portrait-stack">
+          <img data-gallery-index="1" alt="" />
+          <img data-gallery-index="2" alt="" />
+        </div>
+      </section>
+
+      <section class="section gallery reveal" aria-label="Photo gallery">
+        <p class="kicker">Gallery</p>
+        <h2>A few frames of us</h2>
+        <div class="gallery-grid" id="gallery"></div>
+      </section>
+
+      <section class="section venue reveal">
+        <p class="kicker">Venue</p>
+        <h2 data-text="venue"></h2>
+        <p><span data-text="dateLabel"></span> · <span data-text="time"></span></p>
+        <a class="map-button" id="mapButton" target="_blank" rel="noopener">
+          <span>Open map</span>
+        </a>
+      </section>
+    </main>
+
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Toggle background music">
+      <span>Music</span>
+    </button>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
